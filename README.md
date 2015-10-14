@@ -46,9 +46,12 @@ MongoCollection.initAlgolia(AlgoliaIndex, {
 });
 ```
 Options (same as above + the following):
-- clearIndex: Empty the Algolia index on start (```false``` by default)
+- clearIndex: Empty the Algolia index on start (```false``` by default).
+- mongoSelector: Mongo selector for the cursor that will be used to initial sync (```{}``` by default).
+- mongoOptions: Mongo options for the cursor that will be used to initial sync (```{}``` by default).
 
 Notes
 -----
 
 - The Algolia indexes can be created with the [acemtp:algolia](http://github.com/acemtp/meteor-algolia) package.  
+- The Algolia ```objectID``` used will be the ```_id``` of the Mongo documents.

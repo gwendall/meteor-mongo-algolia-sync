@@ -2,7 +2,7 @@ Package.describe({
   name: 'gwendall:mongo-algolia-sync',
   summary: 'Automatically sync a Mongo collection to an Algolia index',
   git: 'https://github.com/gwendall/meteor-mongo-algolia-sync.git',
-  version: '0.1.0'
+  version: '0.1.1'
 });
 
 Package.onUse(function(api, where) {

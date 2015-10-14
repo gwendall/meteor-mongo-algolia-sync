@@ -39,7 +39,9 @@ Meteor.addCollectionPrototype('initAlgolia', function(algoliaIndex, options) {
 
   options = options || {};
   var Collection = this;
-  var docs = Collection.find().fetch();
+  var mongoSelector = options.mongoSelector || {};
+  var mongoOptions = options.mongoOptions || {};
+  var docs = Collection.find(mongoSelector, mongoOptions).fetch();
   docs = _.map(docs, function(doc) {
     if (options.transform) doc = options.transform(doc) || {};
     doc.objectID = doc._id;
