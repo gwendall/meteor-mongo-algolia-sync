@@ -40,6 +40,7 @@ Options:
 Performs the initial sync of all the documents in the given Mongo collection to the given Algolia index.
 
 ```javascript
+// Server-only
 MongoCollection.initAlgolia(AlgoliaIndex, {
   clearIndex: true
 });
