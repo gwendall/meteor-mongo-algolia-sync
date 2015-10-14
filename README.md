@@ -33,7 +33,7 @@ MongoCollection.syncAlgolia(AlgoliaIndex, {
 
 Options:
 - debug (boolean): Console logs operations or not (```false``` by default).
-- transform (function): Allows to transform the document that will be saved to Algolia (return ```false``` not to insert).
+- transform (function): Allows to transform the documents that will be saved to Algolia (return ```false``` to prevent syncing a given document).
 
 **MongoCollection.initAlgolia(AlgoliaIndex, options)**  
 
