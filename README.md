@@ -13,8 +13,6 @@ meteor add gwendall:mongo-algolia-sync
 Methods
 -------
 
-The Algolia indexes can be created with the [acemtp:algolia](http://github.com/acemtp/meteor-algolia) package.  
-
 **MongoCollection.syncAlgolia(AlgoliaIndex, options)**  
 
 Keeps track of all documents inserted / updated / removed within a Mongo collection, and performs the equivalent operations to an Algolia index.
@@ -48,3 +46,8 @@ MongoCollection.initAlgolia(AlgoliaIndex, {
 ```
 Options (same as above + the following):
 - clearIndex: Empty the Algolia index on start (```false``` by default)
+
+Notes
+-----
+
+- The Algolia indexes can be created with the [acemtp:algolia](http://github.com/acemtp/meteor-algolia) package.  
