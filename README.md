@@ -14,6 +14,7 @@ Methods
 -------
 
 **MongoCollection.syncAlgolia(AlgoliaIndex, options)**  
+
 Keeps track of all documents inserted / updated / removed within a Mongo collection, and performs the equivalent operations to an Algolia index.
 
 ```javascript
@@ -35,6 +36,7 @@ Options:
 - transform (function): Allows to transform the document that will be saved to Algolia (return ```false``` not to insert).
 
 **MongoCollection.initAlgolia(AlgoliaIndex, options)**  
+
 Performs the initial sync of all the documents in the given Mongo collection to the given Algolia index.
 
 ```javascript
