@@ -13,7 +13,7 @@ meteor add gwendall:mongo-algolia-sync
 Methods
 -------
 
-The Algolia indexes can be created with [acemtp:algolia](http://github.com/acemtp/meteor-algolia).  
+The Algolia indexes can be created with the [acemtp:algolia](http://github.com/acemtp/meteor-algolia) package.  
 
 **MongoCollection.syncAlgolia(AlgoliaIndex, options)**  
 
