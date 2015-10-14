@@ -45,13 +45,21 @@ Meteor.addCollectionPrototype('initAlgolia', function(algoliaIndex, options) {
     doc.objectID = doc._id;
     return doc;
   });
-  algoliaIndex.clearIndex(function(err, content) {
-    if (options.debug) console.log('Cleared Algolia index.');
+  if (options.clearIndex) {
+    algoliaIndex.clearIndex(function(err, content) {
+      if (options.debug) console.log('Cleared Algolia index.');
+      algoliaIndex.saveObjects(docs, function (error, content) {
+        if (!options.debug) return;
+        if (error) console.error('Error initiating algolia sync.', error);
+        else console.log('Initiated algolia sync.', content);
+      });
+    });
+  } else {
     algoliaIndex.saveObjects(docs, function (error, content) {
       if (!options.debug) return;
       if (error) console.error('Error initiating algolia sync.', error);
       else console.log('Initiated algolia sync.', content);
     });
-  });
+  }
 
 });
