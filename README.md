@@ -47,8 +47,8 @@ MongoCollection.initAlgolia(AlgoliaIndex, {
 ```
 Options (same as above + the following):
 - clearIndex: Empty the Algolia index on start (```false``` by default).
-- mongoSelector: Mongo selector for the cursor that will be used to initial sync (```{}``` by default).
-- mongoOptions: Mongo options for the cursor that will be used to initial sync (```{}``` by default).
+- mongoSelector: Mongo selector for the cursor that will be synced to Algolia (```{}``` by default).
+- mongoOptions: Mongo options for the cursor that will be synced to Algolia (```{}``` by default).
 
 Notes
 -----
