@@ -10,9 +10,12 @@ Package.onUse(function(api, where) {
   api.use([
     'mongo',
     'underscore',
-    'acemtp:algolia',
     'lai:collection-extensions',
     'matb33:collection-hooks',
+  ], 'server');
+
+  api.imply([
+    'acemtp:algolia'
   ], 'server');
 
   api.addFiles([
