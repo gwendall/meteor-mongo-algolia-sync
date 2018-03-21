@@ -1,4 +1,4 @@
-Meteor.addCollectionPrototype('syncAlgolia', function(algoliaIndex, options) {
+CollectionExtensions.addPrototype('syncAlgolia', function(algoliaIndex, options) {
 
   options = options || {};
   var Collection = this;
@@ -35,7 +35,7 @@ Meteor.addCollectionPrototype('syncAlgolia', function(algoliaIndex, options) {
 
 });
 
-Meteor.addCollectionPrototype('initAlgolia', function(algoliaIndex, options) {
+CollectionExtensions.addPrototype('initAlgolia', function(algoliaIndex, options) {
 
   options = options || {};
   var Collection = this;
